@@ -1,0 +1,169 @@
+/* Import Metal Mania font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+/* Body and Background */
+html {
+  background-image: url('../images/red.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  line-height: 1.5;
+  color: white;
+  padding: 0 1em;
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+/* Link Colors */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Different Link Hover Effects for Each Page */
+#home-page nav ul li a:hover {
+  color: red;
+}
+
+#favorite-music nav ul li a:hover {
+  color: blue;
+}
+
+#my-music nav ul li a:hover {
+  color: green;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Metal Mania', 'Comic Sans MS', cursive;
+}
+
+/* Different Header Colors for Each Page that match the Hover Color of the Navigation */
+#home-page h1, #home-page h2 {
+  color: red;
+}
+
+#favorite-music h1, #favorite-music h2 {
+  color: blue;
+}
+
+#my-music h1, #my-music h2 {
+  color: green;
+}
+
+/* Main Content */
+main {
+  max-width: 90%;
+  margin: 2em auto;
+  position: relative;
+}
+
+/* Fixed Width for Home Page */
+#home-page main {
+  width: 800px;
+}
+
+/* Sections */
+section {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Absolute Positioning for Header Image */
+.imageR {
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Move to the right side */
+}
+
+/* Demo Track Section */
+#demo-track {
+  float: right; /* Float this section to the right */
+}
+
+/* Section Border Styles */
+#home-page section {
+  border: 2px solid red;
+}
+
+#favorite-music section {
+  border: 2px dotted blue;
+}
+
+#my-music section {
+  border: 2px dashed green;
+}
+
+/* Image Border Styles (Same as the Section Border Styles) */
+#home-page img {
+  border: 2px solid red;
+}
+
+#favorite-music img {
+  border: 2px dotted blue;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+#my-music img {
+  border: 2px dashed green;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Clearfix for floating elements */
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  section {
+    float: none;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+/* Iframe Styling */
+iframe {
+  border: 0;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
