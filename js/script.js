@@ -26,3 +26,8 @@ function initMap() {
     content: contentString,
     ariaLabel: "IIT",
   });
+  
+  // This shows the info window on marker hover
+  markerIIT.addListener("mouseover", () => {
+    infowindowIIT.open(map, markerIIT);
+  });
