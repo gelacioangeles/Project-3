@@ -50,3 +50,23 @@ function initMap() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
+		  
+          infoWindow.setPosition(pos);
+          // Added in a message for the current location info window.
+          const currentLocationString = `
+            <div style="color: black;">
+              <h2>FOUND YOU!</h2>
+              <p>These are your coordinates: ${pos.lat.toFixed(6)}, ${pos.lng.toFixed(6)}</p>
+            </div>`;
+          infoWindow.setContent(currentLocationString);
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
