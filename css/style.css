@@ -166,9 +166,59 @@ main::after {
     flex-direction: column;
   }
   section {
-    float: none;
     width: 100%;
     margin-bottom: 1em;
+  }
+}
+
+/* Mobile Styles for Devices with a max-width of 768px */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5em 0;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  section {
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+  }
+
+  #map {
+    height: 300px;
+  }
+}
+
+/* Mobile Styles for Devices with a max-width of 480px */
+@media (max-width: 480px) {
+  nav ul {
+    font-size: 0.9em;
+  }
+
+  header h1 {
+    font-size: 1.3em;
+  }
+
+  section h2 {
+    font-size: 1.2em;
+  }
+
+  .bxslider img {
+    height: auto;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 0.5rem;
   }
 }
 
