@@ -86,3 +86,13 @@ function initMap() {
 
   triangle.setMap(map);
 }
+
+// The function to calculate triangle coordinates.
+function createTriangleCoords(center, sideLength) {
+  const height = (Math.sqrt(3) / 2) * sideLength;
+  return [
+    { lat: center.lat + (height / 111320), lng: center.lng },
+    { lat: center.lat - (sideLength / (2 * 111320)), lng: center.lng - (sideLength / (2 * 111320 * Math.cos(Math.PI / 180 * center.lat))) }, // Bottom left vertex
+    { lat: center.lat - (sideLength / (2 * 111320)), lng: center.lng + (sideLength / (2 * 111320 * Math.cos(Math.PI / 180 * center.lat))) }, // Bottom right vertex
+  ];
+}
