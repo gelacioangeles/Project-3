@@ -191,9 +191,8 @@ main::after {
     width: 45%;
   }
 
-  #home-page main {
-    width: 90%;
-    margin: 3em auto;
+  #home-page img {
+    margin: 8em auto 1em;
   }
 }
 
