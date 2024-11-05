@@ -160,10 +160,11 @@ main::after {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
   }
+  
   section {
     float: none;
     width: 100%;
@@ -171,54 +172,52 @@ main::after {
   }
 }
 
-/* Mobile Styles for Devices with a max-width of 768px */
-@media (max-width: 768px) {
+/* Mobile Styles for Devices with a min-width of 600px */
+@media screen and (min-width: 600px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 
   nav ul li {
-    margin: 0.5em 0;
+    margin: 0 1em;
   }
 
   header h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   section {
-    width: 100%;
-    margin: 0;
-    padding: 1em;
+    width: 45%;
   }
 
-  #map {
-    height: 300px;
+  #home-page main {
+    width: 90%;
+    margin: 3em auto;
   }
 }
 
-/* Mobile Styles for Devices with a max-width of 480px */
-@media (max-width: 480px) {
-  nav ul {
-    font-size: 0.9em;
+/* Mobile Styles for Devices with a min-width of 1000px */
+@media screen and (min-width: 1000px) {
+  nav ul li {
+    display: inline-block;
   }
 
-  header h1 {
-    font-size: 1.3em;
+  section {
+    padding: 2em;
   }
 
-  section h2 {
-    font-size: 1.2em;
+  #home-page main {
+    width: 80%;
   }
 
-  .bxslider img {
-    height: auto;
-    width: 100%;
+  h1, h2 {
+    margin-bottom: 0.5em;
   }
 
   footer {
-    font-size: 0.8em;
-    padding: 0.5rem;
+    font-size: 1em;
+    padding: 1.5rem;
   }
 }
 
