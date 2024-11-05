@@ -70,3 +70,6 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
+  
+  // Creating the small triangle vertices
+  const triangleCoords = createTriangleCoords(IIT, 16000);
