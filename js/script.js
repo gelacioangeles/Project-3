@@ -27,7 +27,10 @@ function initMap() {
     ariaLabel: "IIT",
   });
   
-  // This shows the info window on marker hover
+  // This shows the info window on marker hover.
   markerIIT.addListener("mouseover", () => {
     infowindowIIT.open(map, markerIIT);
   });
+  
+  // Initializes a InfoWindow for Geolocation.
+  infoWindow = new google.maps.InfoWindow();
