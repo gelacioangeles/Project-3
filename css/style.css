@@ -74,6 +74,10 @@ h1, h2 {
   color: green;
 }
 
+#google-maps h1, #google-maps h2 {
+  color: #D700D7; /* Bright purple color */
+}
+
 /* Main Content */
 main {
   max-width: 90%;
