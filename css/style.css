@@ -230,3 +230,27 @@ iframe {
   max-width: 560px;
   height: 315px;
 }
+
+/* Slideshow Styles */
+.slideshow {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+.slideshow ul {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slideshow ul li {
+  text-align: center;
+}
+
+/* The bxslider images fill the container without borders */
+.bxslider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
