@@ -107,3 +107,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+
+// Shows the initMap function to the global scope.
+window.initMap = initMap;
