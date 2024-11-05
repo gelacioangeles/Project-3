@@ -71,5 +71,18 @@ function initMap() {
     }
   });
   
-  // Creating the small triangle vertices
+  // Creating the small triangle vertices.
   const triangleCoords = createTriangleCoords(IIT, 16000);
+  
+  // Creating and displays the triangle on the map.
+  const triangle = new google.maps.Polygon({
+    paths: triangleCoords,
+    strokeColor: "#000000",
+    strokeOpacity: 1.0,
+    strokeWeight: 2,
+    fillColor: "rgba(0, 0, 0, 0)",
+    fillOpacity: 0,
+  });
+
+  triangle.setMap(map);
+}
