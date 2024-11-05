@@ -14,3 +14,15 @@ function initMap() {
     map,
     title: "Illinois Institute of Technology",
   });
+
+  // Made the content structured for the info window.
+  const contentString = `
+    <div style="color: black;">
+      <h1>Illinois Institute of Technology</h1>
+      <p>Illinois Institute of Technology (IIT) is a private university in Chicago.</p>
+    </div>`;
+  
+  const infowindowIIT = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "IIT",
+  });
