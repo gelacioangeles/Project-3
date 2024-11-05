@@ -103,6 +103,10 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Google Maps Section Border */
+#google-maps section {
+  border: 2px solid #D700D7;
+}
 /* Absolute Positioning for Header Image */
 .imageR {
   position: absolute; /* Absolute positioning */
