@@ -83,9 +83,6 @@ main {
   max-width: 90%;
   margin: 2em auto;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
 }
 
 /* Fixed Width for Home Page */
@@ -95,16 +92,14 @@ main {
 
 /* Sections */
 section {
-  width: 80%; /* Set to a fixed width */
+  float: left;
+  width: 48%;
+  margin: 1%;
   padding: 1em;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Google Maps Section Border */
-#google-maps section {
-  border: 2px solid #D700D7;
-}
 /* Absolute Positioning for Header Image */
 .imageR {
   position: absolute; /* Absolute positioning */
@@ -128,6 +123,10 @@ section {
 
 #my-music section {
   border: 2px dashed green;
+}
+
+#google-maps section {
+  border: 2px solid #D700D7;
 }
 
 /* Image Border Styles (Same as the Section Border Styles) */
@@ -166,6 +165,7 @@ main::after {
     flex-direction: column;
   }
   section {
+    float: none;
     width: 100%;
     margin-bottom: 1em;
   }
