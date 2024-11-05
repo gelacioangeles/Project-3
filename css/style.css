@@ -75,7 +75,7 @@ h1, h2 {
 }
 
 #google-maps h1, #google-maps h2 {
-  color: #D700D7; /* Bright purple color */
+  color: #D700D7;
 }
 
 /* Main Content */
@@ -100,16 +100,17 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Absolute Positioning for Header Image */
+/* Header Image */
 .imageR {
-  position: absolute; /* Absolute positioning */
-  top: 20px; /* Adjust top position */
-  right: 20px; /* Move to the right side */
+  display: block;
+  margin: 1em auto;
+  max-width: 90%;
+  height: auto;									 													 
 }
 
 /* Demo Track Section */
 #demo-track {
-  float: right; /* Float this section to the right */
+  float: right;
 }
 
 /* Section Border Styles */
@@ -129,7 +130,7 @@ section {
   border: 2px solid #D700D7;
 }
 
-/* Image Border Styles (Same as the Section Border Styles) */
+/* Image Border Styles */
 #home-page img {
   border: 2px solid red;
 }
@@ -158,63 +159,56 @@ main::after {
   display: table;
   clear: both;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-  nav ul {
+/* Mobile Styles for Devices with a min-width of 600px */
+@media screen and (min-width: 600px) {
+	
+  #home-page nav ul {
     flex-direction: column;
   }
-  
-  section {
-    float: none;
+
+  #home-page header h1 {
+    font-size: 2.5em;
+  }
+
+  #home-page section {
     width: 100%;
     margin-bottom: 1em;
   }
-}
 
-/* Mobile Styles for Devices with a min-width of 600px */
-@media screen and (min-width: 600px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
+  #home-page main {
+    padding: 1em;
   }
 
-  nav ul li {
-    margin: 0 1em;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  section {
-    width: 45%;
+  #home-page footer {
+    font-size: 1.2em;
+    padding: 1rem;
   }
 
   #home-page img {
-    margin: 8em auto 1em;
+    margin: 4em auto 1em;
   }
 }
 
 /* Mobile Styles for Devices with a min-width of 1000px */
 @media screen and (min-width: 1000px) {
-  nav ul li {
-    display: inline-block;
+	
+  #home-page nav ul {
+    flex-direction: row;
   }
 
-  section {
-    padding: 2em;
+  #home-page section {
+    width: 48%; 
   }
 
-  #home-page main {
-    width: 80%;
-  }
-
-  h1, h2 {
+  #home-page header h1, #home-page header h2 {
     margin-bottom: 0.5em;
   }
 
-  footer {
+  #home-page main {
+    width: 80%; 
+  }
+
+  #home-page footer {
     font-size: 1em;
     padding: 1.5rem;
   }
