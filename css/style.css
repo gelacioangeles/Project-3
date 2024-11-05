@@ -95,9 +95,7 @@ main {
 
 /* Sections */
 section {
-  float: left;
-  width: 48%;
-  margin: 1%;
+  width: 80%; /* Set to a fixed width */
   padding: 1em;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
