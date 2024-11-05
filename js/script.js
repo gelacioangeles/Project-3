@@ -96,3 +96,14 @@ function createTriangleCoords(center, sideLength) {
     { lat: center.lat - (sideLength / (2 * 111320)), lng: center.lng + (sideLength / (2 * 111320 * Math.cos(Math.PI / 180 * center.lat))) }, // Bottom right vertex
   ];
 }
+
+// This handles any Geolocation errors.
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: Current Location Cannot Be Found."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
