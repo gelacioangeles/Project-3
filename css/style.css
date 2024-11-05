@@ -48,6 +48,10 @@ nav ul li a {
   color: green;
 }
 
+#google-maps nav ul li a:hover {
+  color: #D700D7;
+}
+
 /* Header Styles */
 header {
   text-align: center;
