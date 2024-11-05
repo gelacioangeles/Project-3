@@ -34,3 +34,9 @@ function initMap() {
   
   // Initializes a InfoWindow for Geolocation.
   infoWindow = new google.maps.InfoWindow();
+  
+  // Creating a button for the user's current location.
+  const locationButton = document.createElement("button");
+  locationButton.textContent = "Find Current Location";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
